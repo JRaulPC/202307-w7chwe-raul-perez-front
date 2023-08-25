@@ -1,2 +1,5 @@
 .DS_Store
-node_Modules
+node_modules
+.env
+/dist
+/coverage

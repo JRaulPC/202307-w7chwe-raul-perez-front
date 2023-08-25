@@ -1,0 +1,20 @@
+import "./Header.css";
+
+const Header = (): React.ReactElement => {
+  return (
+    <header className="header">
+      <div className="header-content">
+        <h1>Robots</h1>
+        <img
+          className="main-header__logo"
+          src="/img/app-logo.webp"
+          alt="Robots webpage logo"
+          width="82"
+          height="67"
+        />
+      </div>
+    </header>
+  );
+};
+
+export default Header;

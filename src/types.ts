@@ -1,15 +1,19 @@
 export interface ApiRobot {
-  robots: [
-    {
-      _id: string;
-      name: string;
-      image: string;
-      speed: number;
-      endurance: number;
-    },
-  ];
+  _id: string;
+  name: string;
+  image: string;
+  speed: number;
+  endurance: number;
 }
 
-export interface Robot extends Omit<ApiRobot, "_id" | "robots"> {
-  id: number;
+export interface ApiRobots {
+  robots: ApiRobot[];
+}
+
+export interface Robot extends Omit<ApiRobots, "_id" | "robots"> {
+  id: string;
+  name: string;
+  image: string;
+  speed: number;
+  endurance: number;
 }

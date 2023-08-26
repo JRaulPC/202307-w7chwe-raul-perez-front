@@ -7,3 +7,9 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(apiRobotsMock));
   }),
 ];
+
+export const errorHandlers = [
+  rest.get(`${apiUrl}/robots`, (_req, res, ctx) => {
+    return res(ctx.status(404, "Can't get robots right now"));
+  }),
+];

@@ -1,3 +1,4 @@
+import NavigationBar from "../NavigationBar/NavigationBar";
 import "./Header.css";
 
 const Header = (): React.ReactElement => {
@@ -13,6 +14,7 @@ const Header = (): React.ReactElement => {
           height="67"
         />
       </div>
+      <NavigationBar />
     </header>
   );
 };

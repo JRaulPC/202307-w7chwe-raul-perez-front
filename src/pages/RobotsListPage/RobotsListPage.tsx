@@ -17,12 +17,10 @@ const RobotsListPage = (): React.ReactElement => {
   }, [dispatch, getRobots]);
 
   return (
-    <>
-      <section className="robots-page">
-        <h2 className="robots-page__heading">These are the Robots</h2>
-        <RobotsList />
-      </section>
-    </>
+    <section className="robots-page">
+      <h2 className="robots-page__heading">These are the Robots</h2>
+      <RobotsList />
+    </section>
   );
 };
 

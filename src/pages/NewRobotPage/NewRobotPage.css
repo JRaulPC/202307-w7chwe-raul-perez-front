@@ -1,0 +1,9 @@
+.new-robot-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-robot-page__title {
+  font-size: 1.25rem;
+}

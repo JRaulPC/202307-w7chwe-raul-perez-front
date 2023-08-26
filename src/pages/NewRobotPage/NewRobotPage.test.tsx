@@ -1,13 +1,14 @@
-import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { setupStore } from "../..";
 import { robotsMock } from "../../mocks/mocks";
-import RobotsListPage from "./RobotsListPage";
 
-describe("Given a Robots list page", () => {
-  describe("When is rendered", () => {
-    test("Then it should show a heading with the text 'These are the robots'", () => {
-      const headerText = "These are the Robots";
+import { render, screen } from "@testing-library/react";
+import NewRobotPage from "./NewRobotPage";
+
+describe("Given a New robot page", () => {
+  describe("Wwhen is rendered", () => {
+    test("Then it should show a heading with the text 'Here you can create a robot'", () => {
+      const headerText = "Here you can create a robot";
       const store = setupStore({
         robotsStore: {
           robots: robotsMock,
@@ -16,7 +17,7 @@ describe("Given a Robots list page", () => {
 
       render(
         <Provider store={store}>
-          <RobotsListPage />
+          <NewRobotPage />
         </Provider>,
       );
 

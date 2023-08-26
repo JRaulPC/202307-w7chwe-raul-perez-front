@@ -8,11 +8,11 @@
   padding: 16px 4px;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #fed132;
+  background-color: #d369ff;
 }
 
 .navigation-bar {
-  padding: 32px;
+  padding: 16px;
 }
 
 .navigation-bar__add.active {

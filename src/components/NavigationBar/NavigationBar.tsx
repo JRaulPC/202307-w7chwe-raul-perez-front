@@ -11,7 +11,7 @@ const NavigationBar = (): React.ReactElement => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/new-robots" className="navigation-bar__add ">
+          <NavLink to="/new-robot" className="navigation-bar__add ">
             Add robot
           </NavLink>
         </li>

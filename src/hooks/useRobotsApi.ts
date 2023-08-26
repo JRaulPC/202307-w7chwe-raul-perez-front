@@ -1,19 +1,21 @@
 import axios from "axios";
 import { useCallback } from "react";
-import { ApiRobot, Robot } from "../types";
+import { ApiRobots, Robot } from "../types";
 
-export const apiUrl = import.meta.env.MONGODB_URL;
+export const apiUrl = import.meta.env.VITE_API_URL;
 
 const useRobotsApi = () => {
   const getRobots = useCallback(async (): Promise<Robot[]> => {
     try {
-      const { data: apiRobots } = await axios.get<ApiRobot[]>(
+      const { data: apiRobots } = await axios.get<ApiRobots>(
         `${apiUrl}/robots`,
       );
 
-      const robots = apiRobots.map<Robot>(
+      const apiRobotsToMap = apiRobots.robots;
+
+      const robots = apiRobotsToMap.map<Robot>(
         ({ _id, endurance, image, name, speed }) => ({
-          id: +_id,
+          id: _id,
           endurance,
           image,
           name,

@@ -6,8 +6,12 @@ export interface ApiRobot {
   endurance: number;
 }
 
-export interface Robot extends Omit<ApiRobot, "_id"> {
-  id: number;
+export interface ApiRobots {
+  robots: ApiRobot[];
+}
+
+export interface Robot extends Omit<ApiRobots, "_id" | "robots"> {
+  id: string;
   name: string;
   image: string;
   speed: number;

@@ -17,6 +17,7 @@ export const robotsMock: Robot[] = [
     speed: 4,
     endurance: 10,
   },
+
   {
     id: "3",
     name: "Terminator",

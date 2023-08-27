@@ -6,6 +6,10 @@ export const handlers = [
   rest.get(`${apiUrl}/robots`, (_req, res, ctx) => {
     return res(ctx.status(200), ctx.json(apiRobotsMock));
   }),
+
+  rest.post(`${apiUrl}/robots`, (_req, res, ctx) => {
+    return res(ctx.status(200), ctx.json(apiRobotsMock));
+  }),
 ];
 
 export const errorHandlers = [

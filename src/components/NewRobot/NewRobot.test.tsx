@@ -40,13 +40,15 @@ describe("given a NewRobot component", () => {
     });
   });
 
-  describe("When an user types all the data for the robot 'Roomba'", () => {
-    const name = "Roomba";
-    const imageUrl =
-      "https://s2.qwant.com/thumbr/0x380/d/8/5296e3ceaa1f6f98c7aa54081ec63ef71eaf324aa5c18ace6373c517de5a7a/batman-c-e-robin-dick-grayson-verita-robins-1-v3-534607-1536x864.jpg?u=https%3A%2F%2Fanimesweet.com%2Fwp-content%2Fuploads%2F2021%2F08%2Fbatman-c-e-robin-dick-grayson-verita-robins-1-v3-534607-1536x864.jpg&q=0&b=1&p=0&a=0";
-    const speed = 1;
-    const endurance = 10;
+  const name = "Roomba";
+  const imageUrl =
+    "https://s2.qwant.com/thumbr/0x38e-robin-dick-gra%2F%2Fanimesweet.com%2Fwp-content%2Fuploads%2F2021%";
+  const speed = 1;
+  const endurance = 10;
 
+  const buttonText = "Create Robot";
+
+  describe("When an user types all the data for the robot 'Roomba'", () => {
     test("Then it should show the typed data about 'Roomba' in the input textboxes", async () => {
       render(
         <BrowserRouter>
@@ -81,8 +83,6 @@ describe("given a NewRobot component", () => {
     });
 
     test("Then the create 'Create robot' button should be ennabled", async () => {
-      const buttonText = "Create Robot";
-
       render(
         <BrowserRouter>
           <Provider store={store}>

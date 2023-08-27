@@ -6,7 +6,7 @@ import {
   startLoadingActionCreator,
   stopLoadingActionCreator,
 } from "../store/ui/uiSlice";
-import { ApiRobots, Robot } from "../types";
+import { ApiRobot, ApiRobots, Robot } from "../types";
 
 export const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -41,7 +41,19 @@ const useRobotsApi = () => {
     }
   }, [dispatch]);
 
-  const addRobot = async (robot: Partial<Robot>): Promise<Robot> => {
+  const addRobot = async ({
+    name,
+    speed,
+    image,
+    endurance,
+  }: Partial<Robot>): Promise<Robot> => {
+    const robot: Partial<ApiRobot> = {
+      name,
+      image,
+      speed,
+      endurance,
+    };
+
     const { data: newRobot } = await axios.post<Robot>(
       `${apiUrl}/robots`,
       robot,

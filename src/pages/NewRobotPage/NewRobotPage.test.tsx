@@ -7,8 +7,8 @@ import NewRobotPage from "./NewRobotPage";
 
 describe("Given a New robot page", () => {
   describe("Wwhen is rendered", () => {
-    test("Then it should show a heading with the text 'Here you can create a robot'", () => {
-      const headerText = "Here you can create a robot";
+    test("Then it should show a heading with the text 'Who's the new robot'", () => {
+      const headerText = "Who's the new robot?";
       const store = setupStore({
         robotsStore: {
           robots: robotsMock,

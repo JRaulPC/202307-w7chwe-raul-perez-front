@@ -33,7 +33,6 @@
     radial-gradient(circle 6.7px, currentColor 94%, #0000 0);
   background-repeat: no-repeat;
   animation: spinner-mu2ebf 1s infinite linear;
-  position: relative;
 }
 
 .loader__loading::before {

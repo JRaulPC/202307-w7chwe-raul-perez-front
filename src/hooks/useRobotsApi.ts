@@ -1,10 +1,14 @@
 import axios from "axios";
 import { useCallback } from "react";
+import { useAppDispatch } from "..";
+import { showErrorActionCreator } from "../store/ui/uiSlice";
 import { ApiRobots, Robot } from "../types";
 
 export const apiUrl = import.meta.env.VITE_API_URL;
 
 const useRobotsApi = () => {
+  const dispatch = useAppDispatch();
+
   const getRobots = useCallback(async (): Promise<Robot[]> => {
     try {
       const { data: apiRobots } = await axios.get<ApiRobots>(
@@ -25,9 +29,10 @@ const useRobotsApi = () => {
 
       return robots;
     } catch {
+      dispatch(showErrorActionCreator());
       throw new Error("Can't get robots right now");
     }
-  }, []);
+  }, [dispatch]);
 
   const addRobot = async (robot: Partial<Robot>): Promise<Robot> => {
     const { data: newRobot } = await axios.post<Robot>(

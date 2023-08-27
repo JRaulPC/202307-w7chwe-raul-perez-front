@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+.header__title {
+  font-family: "orbitron", system-ui;
+  font-size: 3rem;
+}
+
 .header-content {
   display: flex;
   justify-content: center;

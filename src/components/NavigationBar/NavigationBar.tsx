@@ -7,7 +7,7 @@ const NavigationBar = (): React.ReactElement => {
       <ul className="navigation-bar__elements">
         <li>
           <NavLink to="/robots" className="navigation-bar__home">
-            Home
+            The Robots
           </NavLink>
         </li>
         <li>

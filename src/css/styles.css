@@ -24,6 +24,7 @@ button {
   background: none;
   border: none;
   font: inherit;
+  cursor: pointer;
 }
 
 img {

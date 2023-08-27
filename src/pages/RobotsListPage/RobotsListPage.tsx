@@ -18,7 +18,7 @@ const RobotsListPage = (): React.ReactElement => {
 
   return (
     <section className="robots-page">
-      <h2 className="robots-page__heading">These are the Robots</h2>
+      <h2 className="robots-page__heading">Robots List</h2>
       <RobotsList />
     </section>
   );

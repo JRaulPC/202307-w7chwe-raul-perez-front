@@ -29,7 +29,16 @@ const useRobotsApi = () => {
     }
   }, []);
 
-  return { getRobots };
+  const addRobot = async (robot: Partial<Robot>): Promise<Robot> => {
+    const { data: newRobot } = await axios.post<Robot>(
+      `${apiUrl}/robots`,
+      robot,
+    );
+
+    return newRobot;
+  };
+
+  return { getRobots, addRobot };
 };
 
 export default useRobotsApi;

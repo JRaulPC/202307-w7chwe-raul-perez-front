@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import NewRobot from "../../components/NewRobot/Newrobot";
+import NewRobot from "../../components/NewRobot/NewRobot";
 import "./NewRobotPage.css";
 
 const NewRobotPage = () => {

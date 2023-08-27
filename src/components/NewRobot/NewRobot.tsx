@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Robot } from "../../types";
-import "./Newrobot.css";
+import "./NewRobot.css";
 
 const NewRobot = (): React.ReactElement => {
   const [newRobot, setNewRobot] = useState<Partial<Robot>>({

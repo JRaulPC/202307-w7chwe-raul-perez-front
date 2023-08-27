@@ -38,7 +38,7 @@ const NewRobot = (): React.ReactElement => {
   const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const robot = await addRobot(newRobot);
+    const robot: Robot = await addRobot(newRobot);
 
     dispatch(addRobotActionCreator(robot));
     navigate("/robots");
@@ -63,7 +63,7 @@ const NewRobot = (): React.ReactElement => {
           id="image"
           value={newRobot.image}
           onChange={changeNewRobot}
-          maxLength={200}
+          maxLength={500}
         />
       </div>
       <div className="form-control">

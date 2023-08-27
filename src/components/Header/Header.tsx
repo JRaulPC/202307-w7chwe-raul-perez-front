@@ -5,7 +5,7 @@ const Header = (): React.ReactElement => {
   return (
     <header className="header">
       <div className="header-content">
-        <h1>Robots</h1>
+        <h1 className="header__title">Robots</h1>
         <img
           className="main-header__logo"
           src="/img/app-logo.webp"

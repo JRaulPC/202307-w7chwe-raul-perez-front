@@ -11,6 +11,7 @@ export interface ApiRobots {
 }
 
 export interface Robot extends Omit<ApiRobots, "_id" | "robots"> {
+  id: string;
   name: string;
   image: string;
   speed: number;

@@ -1,9 +1,9 @@
 .robot-card {
   border: 2px solid black;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 250px;
 }
 
 .robot-card__title {

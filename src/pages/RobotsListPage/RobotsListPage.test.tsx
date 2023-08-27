@@ -7,7 +7,7 @@ import RobotsListPage from "./RobotsListPage";
 describe("Given a Robots list page", () => {
   describe("When is rendered", () => {
     test("Then it should show a heading with the text 'These are the robots'", () => {
-      const headerText = "These are the Robots";
+      const headerText = "Robots List";
       const store = setupStore({
         robotsStore: {
           robots: robotsMock,

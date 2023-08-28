@@ -1,0 +1,19 @@
+.footer {
+  color: aliceblue;
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  padding: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #aa30dd;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.footer__content {
+  font-family: "kirang haerang", system-ui;
+  font-size: 16px;
+}

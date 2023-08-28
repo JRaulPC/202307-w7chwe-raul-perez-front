@@ -4,6 +4,7 @@ import NewRobotPage from "../../pages/NewRobotPage/NewRobotPage";
 import RobotsListPage from "../../pages/RobotsListPage/RobotsListPage";
 import paths from "../../paths/paths";
 import ErrorFeedback from "../ErrorFeedback/ErroFeedback";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Loader from "../Loader/Loader";
 import "./App.css";
@@ -26,6 +27,7 @@ const App = (): React.ReactElement => {
             <Route path={paths.newRobot} element={<NewRobotPage />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </>
   );

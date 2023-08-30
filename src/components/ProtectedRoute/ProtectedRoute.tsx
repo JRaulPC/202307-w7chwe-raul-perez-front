@@ -9,7 +9,7 @@ const ProtectedRoute = ({
 }: PropsWithChildren): React.ReactElement => {
   const [user, isLoading] = useAuthState(auth);
 
-  if (isLoading && !user) {
+  if (!isLoading && !user) {
     return <Navigate to={paths.loginPage} />;
   }
 
